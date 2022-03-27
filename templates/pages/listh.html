@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'listh.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="#">pause<span>cafe.</span></a></div>
+            <ul class="menu">
+                <li><a href="#home" class="menu-btn">Home</a></li>
+                <li><a href="{% url 'hassanmenu'%}" class="menu-btn">menu</a></li>
+                <li><a href="#services" class="menu-btn">liste des commandes</a></li>
+                <li><a href="#skills" class="menu-btn">votre profile</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    <section class="home" id="home">
+        <h1>LISTE DES COMMANDES</h1>
+        <img src="{{hassan.photo.url}}" alt=""><br>
+        <div class="rech">
+            <input type="date" name="" id="">
+            <input type="time" name="" id="">
+            <input type="datetime" name="" id="">
+            <input type="button" name="" id="" value="search">
+
+        </div>
+        <table border="2">
+            <tr>
+                <th>DATE</th>
+                <th>TIME</th>
+                <th>LIST DES PRODUITS</th>
+                <th>PRICE</th>
+            </tr>
+            {% for i in commandes  %}
+            <tr class="hhl">
+                <td>{{i.time}}</td>
+                <td>{{i.date}}</td>
+                <td>{{i.listitem}}</td>
+                <td>{{i.price}}</td>
+            </tr>
+            
+            {% endfor %}
+            
+        </table>
+    </section>
+</body>
+<script>
+    
+    
+    
+   
+</script>
+
+</html>

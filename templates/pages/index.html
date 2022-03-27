@@ -1,0 +1,225 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<!-- home section start -->
+<section class="home" id="home">
+    <div class="max-width">
+        <div class="home-content">
+            <div class="text-1">WELCOME IN </div>
+            <div class="text-2">Pause Cafe </div>
+            <div class="text-3">The future  <span class="typing"></span></div>
+            
+            <a href="#" id="k">Login</a>
+        </div>
+    </div>
+    <img src="{% static 'images/img1.jfif' %}" alt="" class="img1" id="i">
+    <form action="user_login" class="form1" method="post">
+        {% csrf_token %}
+        <h1>Espace administratif</h1>
+        <div class="war">
+            <img src="{% static 'images/war.png' %}" alt="" class="war1">
+            <h2>SEULS LES EMPLOYES QUI PEUVENT ACCEDER A CETTE ZONE</h2>
+        </div>
+        <label for="email" class="lab">login</label>
+        <input type="email" placeholder="entrez votre email" class="ema" name="email"><br>
+        <label for="pass" class="lab">password</label>
+        <input type="password" placeholder="entrez votre password" name="pass" class="ema">
+        <input type="submit" value="allez A mon espace" class="tra" >
+    </form>
+
+    
+</section>
+
+<!-- about section start -->
+<section class="about" id="about">
+    <div class="max-width">
+        <h2 class="title">About THE RESTAURANT</h2>
+        <div class="about-content">
+            <div class="column left">
+                <img src="{% static 'images/log.png' %}" alt="">
+            </div>
+            <div class="column right">
+                <div class="text">Pause Cafe the futur <span class="typing-2"></span></div>
+                <p>TEL:  &nbsp;  &nbsp;0610868038  <br> EAMAIL:avhraf.elbrini@gmail.com <br> facebook:pause cafe <br> instagrame: pause cafe <br> fax:05467328</p>
+                <a href="#">get full localisation </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- services section start -->
+<section class="services" id="services">
+    <div class="max-width">
+        <h2 class="title">services</h2>
+        <div class="serv-content">
+            <div class="card">
+                <div class="box">
+                    <i class="fas fa-paint-brush"></i>
+                    <div class="text">reserver cafe</div>
+                    <p>prend le rendez vous pour vous et votre famille</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <i class="fas fa-chart-line"></i>
+                    <div class="text">faire une recalamation</div>
+                    <p>si un service de nos cafe ne vous aimezpas dita a npus pour le changer</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <i class="fas fa-code"></i>
+                    <div class="text">suggere une amelioration</div>
+                    <p>tous vos avis nous interesse</p>
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+</section>
+
+<!-- skills section start -->
+<section class="qualite" id="quantite">
+    <div class="max-width">
+        <h2 class="title">non qualites</h2>
+        <div class="qualite-content">
+            <div class="column left">
+                <div class="text">My creative skills & experiences.</div>
+                <p>pause cafe le cafe de demain cafe totalement jolie avec une belle vue et top serveurs qui vont etre sous votre assistance et ils vonts presenter a vous les meilleurs foods disponibles qui est delecious et safety et n'inquiter pas il y a aussi un grand debit ert nios pas le respect total</p>
+            </div>
+            <div class="column right">
+                <div class="bars">
+                    <div class="info">
+                        <span>delicious food</span>
+                        <span>100%</span>
+                    </div>
+                    <div class="line del"></div>
+                </div>
+                <div class="bars">
+                    <div class="info">
+                        <span>safety food</span>
+                        <span>100%</span>
+                    </div>
+                    <div class="line saf"></div>
+                </div>
+                <div class="bars">
+                    <div class="i nfo">
+                        <span>bonne service</span>
+                        <span>100%</span>
+                    </div>
+                    <div class="line servn"></div>
+                </div>
+                <div class="bars">
+                    <div class="info">
+                        <span>respect</span>
+                        <span>100%</span>
+                    </div>
+                    <div class="line resp"></div>
+                </div>
+                <div class="bars">
+                    <div class="info">
+                        <span>debit de wifi</span>
+                        <span>100%</span>
+                    </div>
+                    <div class="line wif"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- teams section start -->
+<section class="menu1" id="teams">
+    <div class="max-width">
+        <h2 class="title">le menu</h2>
+        <div class="carousel owl-carousel">
+            <div class="card card1" id="itemc1" >
+                <div class="box">
+                    <img src="{% static 'images/boich.jfif' %}" alt="" >
+                    <div class="text">BOISSON CHAUDES</div>
+                    
+                </div>
+            </div>
+            <div class="card" id="itemc2">
+                <div class="box">
+                    <img src="{% static 'images/boif.jfif' %}" alt="" >
+                    <div class="text">BOISSONS FRAICHES</div>
+                    
+                </div>
+            </div>
+            <div class="card" id="itemc3">
+                <div class="box">
+                    <img src="{% static 'images/jus.jfif'%}" alt="">
+                    <div class="text">LES JUS</div>
+                </div>
+            </div>
+            <div class="card" id="itemc4">
+                <div class="box">
+                    <img src="{% static 'images/fra.jfif' %}" alt="">
+                    <div class="text">FRAPPES ET COUPES</div>
+                    
+                </div>
+            </div>
+            <div class="card" id="itemc5">
+                <div class="box">
+                    <img src="{% static 'images/cre.jfif' %}" alt="">
+                    <div class="text">CREPES</div>
+                    
+                </div>
+            </div>
+            <div class="card" id="itemc6">
+                <div class="box">
+                    <img src="{% static 'images/sal.jfif' %}" alt="">
+                    <div class="text">SALADE</div>
+                    
+                </div>
+            </div>
+            <div class="card" id="itemc7">
+                <div class="box">
+                    <img src="{% static 'images/sand.jfif' %}" alt="">
+                    <div class="text">SANDWICH</div>
+                    
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <img src="{% static 'images/tac.jfif' %}" alt="">
+                    <div class="text">TACOS</div>
+                    
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <img src="{% static 'images/hum.jfif'%}" alt="">
+                    <div class="text">HUMBERGER</div>
+                    
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <img src="{% static 'images/pizza.jfif' %}" alt="">
+                    <div class="text">PIZZA</div>
+                    
+                </div>
+            </div>
+
+
+            
+            
+            
+            
+            
+        </div>
+        
+    </div>
+    <img src="{% static 'images/wel.png' %}" alt="" class="mm" id="mp">
+        
+    </div>
+</section>
+
+{% endblock %}

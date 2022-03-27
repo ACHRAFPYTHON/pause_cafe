@@ -1,0 +1,2 @@
+text="[{'time': datetime.time(0, 26, 18, 158058), 'date': datetime.date(2022, 3, 27), 'listitem': '[produit : 1 ( cafe separe"
+print(text[12:20])

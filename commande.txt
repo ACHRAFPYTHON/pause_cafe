@@ -1,0 +1,2 @@
+Cafe netspresse,3,kk,10.00
+Lait chaud,4,pp,9.00
